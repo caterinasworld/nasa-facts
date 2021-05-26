@@ -16,6 +16,15 @@ h1 {
   flex-direction: column;
 }
 
+.figure {
+  margin-left: 0;
+  margin-right: 0;
+}
+
+.figure img {
+  width: 100%;
+}
+
 .player-wrapper {
   position: relative;
   padding-top: 56.25%; /* Player ratio: 100 / (1280 / 720) */
