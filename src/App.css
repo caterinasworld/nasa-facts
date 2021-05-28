@@ -1,6 +1,6 @@
 body {
   background-color: lightblue;
-  font-size: 1.4em;
+  font-size: 1.2em;
 }
 
 h1 {
@@ -8,15 +8,17 @@ h1 {
 }
 
 .App {
-  width: 60vw;
+  width: 90vw;
   margin: 40px auto;
 }
 
 .content {
-  flex-direction: column;
+  display: flex;
+  flex-flow: row wrap;
 }
 
 .figure {
+  width: 44vw;
   margin-left: 0;
   margin-right: 0;
 }
@@ -36,8 +38,30 @@ h1 {
   left: 0;
 }
 
+.description {
+  width: 42vw;
+  margin-left: 2vw;
+}
+
 .description::first-line {
   font-weight: bold;
   font-size: 1.4em;
   text-align: left;
+}
+
+@media (max-width: 992px) {
+  .content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .figure,
+  .description {
+    width: 80vw;
+  }
+
+  .description {
+    margin-left: 0;
+  }
 }
