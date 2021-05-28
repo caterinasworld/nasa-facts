@@ -1,3 +1,3 @@
-# Getting Started with Create React App
+# NASA Facts Application
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This project was created with the [NASA APOD API](https://api.nasa.gov/) and bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
