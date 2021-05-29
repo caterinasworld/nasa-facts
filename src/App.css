@@ -1,5 +1,12 @@
 body {
-  background-color: lightcoral;
+  /* background-color: lightyellow; */
+  background: linear-gradient(
+    185deg,
+    lightsalmon,
+    lightpink,
+    mistyrose,
+    lightcoral
+  );
   font-size: 1.2em;
 }
 
