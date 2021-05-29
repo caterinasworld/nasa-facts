@@ -52,7 +52,7 @@ export default function APOD() {
               </div>
             )}
             <section className='description'>
-              <h2>{fact.title}</h2>
+              <h2>📷 {fact.title}</h2>
               <small>{new Date(fact.date).toDateString()}</small>
               <p className='explanation'>{fact.explanation}</p>
               <small>Copyright: {fact.copyright}</small>
