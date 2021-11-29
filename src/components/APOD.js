@@ -35,6 +35,7 @@ export default function APOD() {
       {fact && (
         <>
           <h1>NASA Astronomy Picture of the Day</h1>
+          <h3>Using the NASA APOD API</h3>
           <section className='content'>
             {isImage && (
               <figure className='figure'>
