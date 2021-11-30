@@ -19,6 +19,7 @@ export default function APOD() {
       setFact(data);
       if (data.media_type === 'image') setIsImage(true);
       if (data.url.includes('youtube')) setIsVideo(true);
+      console.log('second', fact, isImage, isVideo);
     } catch (error) {
       console.error(error);
       setError(error);
@@ -34,8 +35,9 @@ export default function APOD() {
       {error && <div>Error: {error.message}</div>}
       {fact && (
         <>
-          <h1>NASA Astronomy Picture of the Day</h1>
-          <h3>Using the NASA APOD API</h3>
+          <h1 className='h1 center'>
+            🎥 Astronomy Picture of the Day - {fact.title}
+          </h1>
           <section className='content'>
             {isImage && (
               <figure className='figure'>
@@ -43,18 +45,15 @@ export default function APOD() {
               </figure>
             )}
             {isVideo && (
-              <div className='player-wrapper'>
-                <ReactPlayer
-                  className='react-player'
-                  url={fact.url}
-                  width='100%'
-                  height='100%'
-                />
+              <div>
+                <ReactPlayer className='react-player' url={fact.url} />
               </div>
             )}
             <section className='description'>
-              <h2>📷 {fact.title}</h2>
-              <small>{new Date(fact.date).toDateString()}</small>
+              <small className='photoDate'>
+                {' '}
+                📆 {new Date(fact.date).toDateString()}
+              </small>
               <p className='explanation'>{fact.explanation}</p>
               {fact.copyright && <small>Copyright: {fact.copyright}</small>}
             </section>
