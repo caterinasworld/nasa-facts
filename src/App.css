@@ -1,13 +1,21 @@
 html {
-  background: mistyrose;
-  font-size: 1.2em;
+  height: 100%;
+  background: linear-gradient(
+    to bottom right,
+    #002233,
+    10%,
+    #00cc99,
+    85%,
+    #002233
+  );
 }
 
-h1 {
-  text-align: center;
+body {
+  font-size: 1.2em;
 }
 
 .App {
   width: 90vw;
   margin: 40px auto;
+  color: #002233;
 }
