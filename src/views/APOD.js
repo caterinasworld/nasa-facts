@@ -7,10 +7,10 @@ const key = process.env.REACT_APP_APOD_API_KEY;
 const url = `https://api.nasa.gov/planetary/apod?api_key=${key}`;
 
 export default function APOD() {
-  const [fact, setFact] = useState();
-  const [isImage, setIsImage] = useState(false);
-  const [isVideo, setIsVideo] = useState(false);
-  const [error, setError] = useState();
+  let [fact, setFact] = useState();
+  let [isImage, setIsImage] = useState(false);
+  let [isVideo, setIsVideo] = useState(false);
+  let [error, setError] = useState();
 
   async function getFacts() {
     try {
@@ -28,7 +28,7 @@ export default function APOD() {
 
   useEffect(() => {
     getFacts();
-  }, []);
+  });
 
   return (
     <>
