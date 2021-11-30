@@ -19,7 +19,6 @@ export default function APOD() {
       setFact(data);
       if (data.media_type === 'image') setIsImage(true);
       if (data.url.includes('youtube')) setIsVideo(true);
-      console.log('second', fact, isImage, isVideo);
     } catch (error) {
       console.error(error);
       setError(error);
@@ -28,7 +27,7 @@ export default function APOD() {
 
   useEffect(() => {
     getFacts();
-  });
+  }, []);
 
   return (
     <>
